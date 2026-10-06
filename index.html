@@ -217,6 +217,13 @@
   .prod-cat-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;}
   .prod-cat-head .prod-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;letter-spacing:0.5px;}
   .prod-cat-head .prod-desc{font-size:13.5px;color:var(--graphite-soft);}
+  .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  @media(max-width:860px){.mat-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:420px){.mat-grid{grid-template-columns:1fr;}}
+  .mat-cell{background:#fff;border:1px solid var(--steel-300);border-radius:var(--radius);padding:18px 18px 16px;}
+  .mat-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--graphite);margin-bottom:6px;}
+  .mat-desc{font-size:13px;color:var(--graphite-soft);}
+  .mat-note{margin-top:14px;font-size:13px;color:var(--blue-steel);}
   .prod-photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
   @media(max-width:860px){.prod-photo-grid{grid-template-columns:repeat(2,1fr);}}
   .prod-photo{border:1px solid var(--steel-300);border-radius:4px;overflow:hidden;background:#ffffff;}
@@ -491,6 +498,20 @@
 
 
       </div>
+
+    <div class="prod-group">
+      <div class="prod-group-head">
+        <span class="prod-group-title">Materials</span>
+        <span class="prod-group-note">Steel grades we currently process, from coil and plate</span>
+      </div>
+      <div class="mat-grid">
+        <div class="mat-cell"><div class="mat-name">SS275 / ASTM A36</div><div class="mat-desc">KS D 3503, eq. SS400</div></div>
+        <div class="mat-cell"><div class="mat-name">SPHC</div><div class="mat-desc">Hot-rolled mild steel (KS D 3501)</div></div>
+        <div class="mat-cell"><div class="mat-name">SUS</div><div class="mat-desc">Stainless steel</div></div>
+        <div class="mat-cell"><div class="mat-name">HGI</div><div class="mat-desc">Hot-dip galvanized steel sheet</div></div>
+      </div>
+      <p class="mat-note">Other grades and surface treatments available on request.</p>
+    </div>
 
 
     </div>
